@@ -3,7 +3,7 @@
 */
 
 function sayHello() {
-  alert(`Hello World!`);
+  alert( "Hello World!" );
 }
 
 sayHello();
@@ -18,13 +18,14 @@ sayHello();
 */
 
 function fullName() {
-  let firstName = prompt("Enter the First Name");
-  let lastName = prompt("Enter the Last Name");
-  let fullName = firstName + " " + lastName;
+  let firstName = prompt( "Enter Your first name" );
+  let lastName = prompt( "Enter your last name" );
+  let fullName = firstName + lastName;
   alert(fullName);
 }
 
 fullName();
+
 
 /*
 3. Create a function named `addTwoNumbers` with the following steps:
@@ -36,13 +37,15 @@ fullName();
 */
 
 function addTwoNumbers() {
-  let firstNum = Number(prompt(`Enter the first number`));
-  let secondNum = Number(prompt(`Enter the second`));
+  let firstNum = +prompt( "Enter Your first number" );
+  let secondNum = +prompt( "Enter your second number" );
   let sum = firstNum + secondNum;
-  alert(sum);
+  alert( sum );
 }
 
-addTwoNumbers();
+addTwoNumbers()
+
+
 
 /*
 4. Create a function named `getTable` with the following steps:
@@ -64,13 +67,15 @@ addTwoNumbers();
 */
 
 function getTable() {
-  let num = Number(prompt("Enter a number"));
-  for (i = 1; i <= 10; i++) {
-    console.log(`${num} * ${1} = ${num * i}`);
+  let num = +prompt( "Enter a number" );
+  for ( let i = 1; i <= 10; i++ ) {
+    console.log( `${num} * ${i} = ${num * i} ` )
   }
 }
 
 getTable();
+
+
 
 /*
 5. Create a function named `isLeapYear` with the following steps:
@@ -80,15 +85,19 @@ getTable();
 */
 
 function isLeapYear() {
-  let year = Number(prompt("Enter a year"));
-  if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
-    alert(`${year} is a leap year`);
-  } else {
-    alert(`${year} is not a leap year`);
+  let year = +prompt( "Enter a year" );
+  if ( year % 100 == 0 && year % 400 == 0 ) {
+    alert( `${year} is a leap year` );
+  } else if ( year % 4 == 0 ) {
+    alert( `${year} is a leap year` );
+  }
+  else {
+    alert( `${year} is not a leap year` )
   }
 }
 
 isLeapYear();
+
 
 /*
 6. Create a function named `getFactorial` with the following steps:
@@ -99,12 +108,13 @@ isLeapYear();
 */
 
 function getFactorial() {
-  let number = Number(prompt("Enter a number"));
+  let number = +prompt( "Enter a number" )
   let factorial = 1;
-  for (i = number; i >= 1; i--) {
-    factorial *= i;
+  for ( let i = 1; i <= number; i++ ) {
+    factorial *= i
   }
-  alert(factorial);
+  alert( `The factorial of ${number} is ${factorial}` )
 }
 
 getFactorial();
+
